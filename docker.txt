@@ -28,6 +28,17 @@ docker pull docker_hub_username/repository_name:tag_name
 ----------------------------------------------------------------------------
 Experiment 10
 
+version: '3'
+services:
+    web1:
+      image: nginx:latest
+      ports:
+        - '8085:80'
+    web2:
+      image: sample
+      ports:
+         - '8086:80'
+
 docker compose up
 ---------------------------------------------------------------------------
 Experiment 11 Swarm
